@@ -9,13 +9,17 @@ notes_dir = r'/Volumes/enc/notes-test'
 
 replacement_char = '-'
 
+
+# rename files replacing spaces with hyphens
 for root, dirs, files in os.walk(notes_dir):
 
     for current_filename in files:
         new_filename = current_filename.replace(' ', replacement_char)
 
-        print(f"current filename: {current_filename}")
-        print(f"    new filename: {new_filename}")
+        # only print the filenames if they have been changed
+        if current_filename != new_filename:
+            print(f"current filename: {current_filename}")
+            print(f"    new filename: {new_filename}")
 
         os.rename(
             os.path.join(root, current_filename), 
