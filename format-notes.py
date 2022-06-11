@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
+# Script to format markdown notes created on my phone. Replace spaces with hyphens in filenames and relative links
+# Inspired by https://stackoverflow.com/a/62458031
+# Author: Connor Rhodes (connor.engineer)
 
 import os
 
 directory = r'/Volumes/enc/notes-test'
 
-# Use underscore? Otherwise defaults to hyphen
-is_use_underscore = False
 replacement_char = '-'
 
 print("Renaming files now!")
