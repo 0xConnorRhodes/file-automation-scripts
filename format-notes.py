@@ -5,12 +5,11 @@
 
 import os
 
-directory = r'/Volumes/enc/notes-test'
+notes_dir = r'/Volumes/enc/notes-test'
 
 replacement_char = '-'
 
-print("Renaming files now!")
-for root, dirs, files in os.walk(directory):
+for root, dirs, files in os.walk(notes_dir):
     print(f"root: {root}")
     print(f"dirs: {dirs}")
     print(f"files: {files}")
@@ -25,5 +24,3 @@ for root, dirs, files in os.walk(directory):
             os.path.join(root, current_filename), 
             os.path.join(root, new_filename)
         )   
-
-print("All done!")
