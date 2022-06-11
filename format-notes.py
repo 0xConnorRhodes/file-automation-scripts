@@ -10,9 +10,6 @@ notes_dir = r'/Volumes/enc/notes-test'
 replacement_char = '-'
 
 for root, dirs, files in os.walk(notes_dir):
-    print(f"root: {root}")
-    print(f"dirs: {dirs}")
-    print(f"files: {files}")
 
     for current_filename in files:
         new_filename = current_filename.replace(' ', replacement_char)
